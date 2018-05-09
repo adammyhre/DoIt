@@ -23,6 +23,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getTasks()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count;
     }
@@ -48,7 +52,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func getTasks() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        do {
+            tasks = try context.fetch(Task.fetchRequest()) as! [Task]
+            print (tasks)
+        } catch {
+            print("OOPS WE HAVE AN ERROR!")
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
