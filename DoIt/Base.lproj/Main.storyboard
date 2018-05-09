@@ -63,34 +63,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-oM-Nn9">
-                                <rect key="frame" x="166" y="83" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWx-oM-Nn9">
+                                <rect key="frame" x="166" y="89" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfe-cv-Z92">
-                                <rect key="frame" x="139" y="125" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfe-cv-Z92">
+                                <rect key="frame" x="87.5" y="125" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="knn-M0-w1c"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUH-II-1IT">
-                                <rect key="frame" x="147" y="191" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUH-II-1IT">
+                                <rect key="frame" x="147" y="180" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aUZ-E2-pZq">
-                                <rect key="frame" x="163" y="236" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aUZ-E2-pZq">
+                                <rect key="frame" x="163" y="216" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rur-3i-lLh">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rur-3i-lLh">
+                                <rect key="frame" x="172" y="272" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="ZXs-Dx-e10" eventType="touchUpInside" id="qPg-tX-yvy"/>
@@ -98,6 +96,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DWx-oM-Nn9" firstAttribute="top" secondItem="gDG-AT-n95" secondAttribute="bottom" constant="25" id="GMq-IV-vWM"/>
+                            <constraint firstItem="rfe-cv-Z92" firstAttribute="top" secondItem="DWx-oM-Nn9" secondAttribute="bottom" constant="15" id="HaO-EI-4rY"/>
+                            <constraint firstItem="aUZ-E2-pZq" firstAttribute="centerX" secondItem="XLs-YY-hIf" secondAttribute="centerX" id="Icc-KL-b3B"/>
+                            <constraint firstItem="rUH-II-1IT" firstAttribute="top" secondItem="rfe-cv-Z92" secondAttribute="bottom" constant="25" id="K4B-R8-Ym6"/>
+                            <constraint firstItem="DWx-oM-Nn9" firstAttribute="centerX" secondItem="XLs-YY-hIf" secondAttribute="centerX" id="Lis-JZ-OMX"/>
+                            <constraint firstItem="rUH-II-1IT" firstAttribute="centerX" secondItem="XLs-YY-hIf" secondAttribute="centerX" id="O1t-pl-oiT"/>
+                            <constraint firstItem="rur-3i-lLh" firstAttribute="centerX" secondItem="XLs-YY-hIf" secondAttribute="centerX" id="kvk-LQ-Q1q"/>
+                            <constraint firstItem="rur-3i-lLh" firstAttribute="top" secondItem="aUZ-E2-pZq" secondAttribute="bottom" constant="25" id="pEX-6F-LMT"/>
+                            <constraint firstItem="rfe-cv-Z92" firstAttribute="centerX" secondItem="XLs-YY-hIf" secondAttribute="centerX" id="w0v-vk-7bT"/>
+                            <constraint firstItem="aUZ-E2-pZq" firstAttribute="top" secondItem="rUH-II-1IT" secondAttribute="bottom" constant="15" id="x8S-gF-qCh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="importantSwitch" destination="aUZ-E2-pZq" id="KlG-Au-2AC"/>
